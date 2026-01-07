@@ -10,6 +10,7 @@ services:
         working_dir: /var/www
         ports:
             - "5173:5173"  # Expose Vite's dev server port
+            - "8080:8080"
         volumes:
             - ./:/var/www
         networks:
@@ -21,7 +22,6 @@ services:
         restart: unless-stopped
         ports:
             - "8878:80"
-            - "8080:8080"
         volumes:
             - ./:/var/www
             - ./_docker/nginx/conf.d:/etc/nginx/conf.d

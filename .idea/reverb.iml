@@ -141,6 +141,20 @@
       <excludeFolder url="file://$MODULE_DIR$/reverb/vendor/pragmarx/google2fa" />
       <excludeFolder url="file://$MODULE_DIR$/reverb/vendor/ta-tikoma/phpunit-architecture-test" />
       <excludeFolder url="file://$MODULE_DIR$/reverb/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/reverb/vendor/clue/redis-protocol" />
+      <excludeFolder url="file://$MODULE_DIR$/reverb/vendor/clue/redis-react" />
+      <excludeFolder url="file://$MODULE_DIR$/reverb/vendor/evenement/evenement" />
+      <excludeFolder url="file://$MODULE_DIR$/reverb/vendor/laravel/reverb" />
+      <excludeFolder url="file://$MODULE_DIR$/reverb/vendor/paragonie/sodium_compat" />
+      <excludeFolder url="file://$MODULE_DIR$/reverb/vendor/pusher/pusher-php-server" />
+      <excludeFolder url="file://$MODULE_DIR$/reverb/vendor/ratchet/rfc6455" />
+      <excludeFolder url="file://$MODULE_DIR$/reverb/vendor/react/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/reverb/vendor/react/dns" />
+      <excludeFolder url="file://$MODULE_DIR$/reverb/vendor/react/event-loop" />
+      <excludeFolder url="file://$MODULE_DIR$/reverb/vendor/react/promise" />
+      <excludeFolder url="file://$MODULE_DIR$/reverb/vendor/react/promise-timer" />
+      <excludeFolder url="file://$MODULE_DIR$/reverb/vendor/react/socket" />
+      <excludeFolder url="file://$MODULE_DIR$/reverb/vendor/react/stream" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

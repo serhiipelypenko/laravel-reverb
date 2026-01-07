@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { dashboard, login, register } from '@/routes';
 import { Head, Link } from '@inertiajs/vue3';
+import { onMounted, onUnmounted } from 'vue';
+import { useEcho } from '@laravel/echo-vue';
 
 withDefaults(
     defineProps<{
@@ -10,6 +12,22 @@ withDefaults(
         canRegister: true,
     },
 );
+
+onMounted(() => {
+    const { leave } = useEcho(
+        'hello-world',                  // channel name
+        'HelloWorld',                   // event name
+        (event) => {
+            console.log('Received event:', event);
+            // Update your UI here, e.g., push to a ref array
+        }
+    );
+
+    // Optional: clean up when component unmounts
+    onUnmounted(() => {
+        leave();
+    });
+});
 </script>
 
 <template>

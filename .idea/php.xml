@@ -152,6 +152,20 @@
       <path value="$PROJECT_DIR$/reverb/vendor/pestphp/pest-plugin-mutate" />
       <path value="$PROJECT_DIR$/reverb/vendor/pestphp/pest-plugin-arch" />
       <path value="$PROJECT_DIR$/reverb/vendor/pestphp/pest-plugin-laravel" />
+      <path value="$PROJECT_DIR$/reverb/vendor/clue/redis-protocol" />
+      <path value="$PROJECT_DIR$/reverb/vendor/clue/redis-react" />
+      <path value="$PROJECT_DIR$/reverb/vendor/paragonie/sodium_compat" />
+      <path value="$PROJECT_DIR$/reverb/vendor/pusher/pusher-php-server" />
+      <path value="$PROJECT_DIR$/reverb/vendor/evenement/evenement" />
+      <path value="$PROJECT_DIR$/reverb/vendor/ratchet/rfc6455" />
+      <path value="$PROJECT_DIR$/reverb/vendor/react/promise-timer" />
+      <path value="$PROJECT_DIR$/reverb/vendor/react/promise" />
+      <path value="$PROJECT_DIR$/reverb/vendor/react/dns" />
+      <path value="$PROJECT_DIR$/reverb/vendor/react/socket" />
+      <path value="$PROJECT_DIR$/reverb/vendor/react/event-loop" />
+      <path value="$PROJECT_DIR$/reverb/vendor/react/cache" />
+      <path value="$PROJECT_DIR$/reverb/vendor/react/stream" />
+      <path value="$PROJECT_DIR$/reverb/vendor/laravel/reverb" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2">

@@ -1,10 +1,12 @@
 <?php
 
+use App\Events\HelloWorld;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use Laravel\Fortify\Features;
 
 Route::get('/', function () {
+    HelloWorld::dispatch();
     return Inertia::render('Welcome', [
         'canRegister' => Features::enabled(Features::registration()),
     ]);
