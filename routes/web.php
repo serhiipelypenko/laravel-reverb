@@ -1,5 +1,7 @@
 <?php
 
+use App\Events\ChatMessage;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use Laravel\Fortify\Features;
@@ -24,6 +26,26 @@ Route::get('/', function () {
         'canRegister' => Features::enabled(Features::registration()),
     ]);
 })->name('home');
+
+// Reverb Test Routes
+Route::get('/reverb-test', function () {
+    return Inertia::render('ReverbTest');
+})->name('reverb-test');
+
+Route::post('/reverb-test/send', function (Request $request) {
+    $request->validate([
+        'message' => 'required|string|max:1000',
+        'sender' => 'required|string|max:50',
+    ]);
+
+    ChatMessage::dispatch(
+        $request->message,
+        $request->sender,
+        now()->format('H:i:s')
+    );
+
+    return back();
+})->name('reverb-test.send');
 
 Route::get('dashboard', function () {
     return Inertia::render('Dashboard');
