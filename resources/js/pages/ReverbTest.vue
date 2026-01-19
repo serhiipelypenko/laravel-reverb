@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Head, useForm } from '@inertiajs/vue3';
-import { onMounted, onUnmounted, ref } from 'vue';
-import { useEcho } from '@laravel/echo-vue';
+import { ref } from 'vue';
+import { useEchoPublic } from '@laravel/echo-vue';
 
 interface Message {
     sender: string;
@@ -15,20 +15,9 @@ const form = useForm({
     sender: 'User-' + Math.random().toString(36).substring(2, 6),
 });
 
-const { listen, stopListening, leaveChannel } = useEcho('chat');
-
-onMounted(() => {
-    console.log('Listening on channel: chat');
-
-    listen('.ChatMessage', (event: Message) => {
-        console.log('Received message:', event);
-        messages.value.push(event);
-    });
-});
-
-onUnmounted(() => {
-    stopListening('.ChatMessage');
-    leaveChannel();
+useEchoPublic('chat', '.ChatMessage', (event: Message) => {
+    console.log('Received message:', event);
+    messages.value.push(event);
 });
 
 function sendMessage() {

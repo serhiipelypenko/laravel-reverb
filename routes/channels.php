@@ -13,3 +13,7 @@ Broadcast::channel('hello-world', function () {
     // Allow ALL public channels (very useful in development!)
     return true;
 });
+
+Broadcast::channel('chat', function () {
+    return true;
+});
